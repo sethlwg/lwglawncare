@@ -1,38 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatButtonModule} from '@angular/material/button';
-import { MatCheckboxModule} from '@angular/material/checkbox';
-import { MatToolbarModule} from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
-import { HomeComponent } from './components/home/home.component';
-import { AboutComponent } from './components/about/about.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { ServicesComponent } from './components/services/services.component';
-import { MatMenuModule }   from '@angular/material/menu';
-
-const appRoutes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'about', component: AboutComponent},
-  {path: 'contact', component: ContactComponent},
-  {path: '**', component: PageNotFoundComponent},
-  {path:  'services', component:ServicesComponent},
-
-];
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { HomeModule } from './home/home.module';
+import { ContactModule } from './contact/contact.module';
+import { AboutModule } from './about/about.module';
+import { ServicesModule } from './services/services.module';
+import { GalleryModule } from './gallery/gallery.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    AboutComponent,
-    PageNotFoundComponent,
-    ContactComponent,
-    ServicesComponent,
-  ],
+  declarations: [AppComponent, PageNotFoundComponent],
+  exports: [PageNotFoundComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -40,11 +25,13 @@ const appRoutes: Routes = [
     MatCheckboxModule,
     MatToolbarModule,
     MatMenuModule,
-    RouterModule.forRoot(appRoutes)
-
+    HomeModule,
+    ContactModule,
+    AboutModule,
+    ServicesModule,
+    GalleryModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
-
+export class AppModule {}

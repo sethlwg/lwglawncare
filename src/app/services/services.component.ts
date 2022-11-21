@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./services.component.css']
 })
 export class ServicesComponent implements OnInit {
+onClick(arg0: string) {
+throw new Error('Method not implemented.');
+}
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
 
 }
