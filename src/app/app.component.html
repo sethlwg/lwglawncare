@@ -1,10 +1,44 @@
 <mat-toolbar color="primary">
-  <button style="margin-right:60px" mat-icon-button routerLink="/">Home</button>
-  <button style="margin-right:60px" mat-icon-button routerLink="/about">About</button>
-  <button style="margin-right:60px" mat-icon-button routerLink="/contact">Contact</button>
-  <button style="margin-right:60px" mat-icon-button routerLink="/services">Services</button>
-  <button style="margin-right:20px" mat-icon-button routerLink="/gallery">Gallery</button>
+  <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+  <button style="margin-right: 60px" mat-icon-button routerLink="/">Home</button>
+
+  <button style="margin-right: 60px" mat-icon-button routerLink="/about" [matMenuTriggerFor]="Information">
+    About
+  </button>
+  <mat-menu #Information="matMenu">
+    <button mat-menu-item>Locations</button>
+    <button mat-menu-item>Our Teams</button>
+    <button mat-menu-item>Testimonials</button>
+  </mat-menu>
+
+  <button style="margin-right: 60px" mat-icon-button routerLink="/contact">Contact</button>
+
+  <button style="margin-right: 60px" mat-icon-button routerLink="/services" [matMenuTriggerFor]="menu">Services</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Mowing & Edging</button>
+    <button mat-menu-item>Fertilization</button>
+    <button mat-menu-item>Weed Control</button>
+    <button mat-menu-item>Pest Control</button>
+    <button mat-menu-item>Sod Installation</button>
+    <button mat-menu-item>Flowerbed Restoration</button>
+    <button mat-menu-item>Flowerbed Border Installation</button>
+    <button mat-menu-item>Pre-emergent</button>
+  </mat-menu>
+
+  <button style="margin-right: 20px" mat-icon-button routerLink="/gallery" [matMenuTriggerFor]="picture">
+    Gallery
+  </button>
+  <mat-menu #picture="matMenu">
+    <button mat-menu-item>Before & After</button>
+  </mat-menu>
 </mat-toolbar>
 <div class="content">
-  <router-outlet></router-outlet>
+  <router-outlet>
+    <mat-grid-list cols="2" rowHeight="3:3" style="height: 200px" gutterSize="10px">
+      <mat-grid-tile>Tile 1</mat-grid-tile>
+      <mat-grid-tile>Tile 2</mat-grid-tile>
+      <mat-grid-tile>Tile 3</mat-grid-tile>
+      <mat-grid-tile>Tile 4</mat-grid-tile>
+    </mat-grid-list>
+  </router-outlet>
 </div>
