@@ -2,18 +2,19 @@
   <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
   <button style="margin-right: 60px" mat-icon-button routerLink="/">Home</button>
 
-  <button style="margin-right: 60px" mat-icon-button routerLink="/about" [matMenuTriggerFor]="Information">
+  <button style="margin-right: 70px" mat-icon-button routerLink="/about" [matMenuTriggerFor]="Information">
     About
   </button>
   <mat-menu #Information="matMenu">
     <button mat-menu-item>Locations</button>
     <button mat-menu-item>Our Teams</button>
     <button mat-menu-item>Testimonials</button>
+    <button mat-menu-item>Quote</button>
   </mat-menu>
 
-  <button style="margin-right: 60px" mat-icon-button routerLink="/contact">Contact</button>
+  <button style="margin-right: 75px" mat-icon-button routerLink="/contact">Contact</button>
 
-  <button style="margin-right: 60px" mat-icon-button routerLink="/services" [matMenuTriggerFor]="menu">Services</button>
+  <button style="margin-right: 80px" mat-icon-button routerLink="/services" [matMenuTriggerFor]="menu">Services</button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item>Mowing & Edging</button>
     <button mat-menu-item>Fertilization</button>
@@ -32,13 +33,13 @@
     <button mat-menu-item>Before & After</button>
   </mat-menu>
 </mat-toolbar>
+
 <div class="content">
   <router-outlet>
-    <mat-grid-list cols="2" rowHeight="3:3" style="height: 200px" gutterSize="10px">
+    <mat-grid-list cols="1" rowHeight="3:3" style="height: 200px" gutterSize="5px">
       <mat-grid-tile>Tile 1</mat-grid-tile>
       <mat-grid-tile>Tile 2</mat-grid-tile>
       <mat-grid-tile>Tile 3</mat-grid-tile>
-      <mat-grid-tile>Tile 4</mat-grid-tile>
     </mat-grid-list>
   </router-outlet>
 </div>

@@ -10,6 +10,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { FormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MatMenuModule } from '@angular/material/menu';
@@ -39,6 +40,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
     MatIconModule,
     MatGridListModule,
     FormsModule,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
