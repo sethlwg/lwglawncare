@@ -14,17 +14,17 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MatMenuModule } from '@angular/material/menu';
-import { HomeModule } from './home/home.module';
+import { HomeModule } from './pages/home/home.module';
 import { ContactModule } from './pages/contact/contact.module';
 import { AboutModule } from './pages/about/about.module';
 import { ServicesModule } from './pages/services/services.module';
 import { GalleryModule } from './pages/gallery/gallery.module';
-import { GalleryComponent } from './components/gallery/gallery.component';
+import { GalleryComponent } from './pages/gallery/gallery.component';
 import { HeaderComponent } from './sharedpages/header/header.component';
 import { FooterComponent } from './sharedpages/footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, PageNotFoundComponent, GalleryComponent, HeaderComponent, FooterComponent],
+  declarations: [AppComponent, PageNotFoundComponent, HeaderComponent, FooterComponent],
   exports: [PageNotFoundComponent],
   imports: [
     BrowserModule,
