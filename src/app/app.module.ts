@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -12,15 +11,15 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { HomeModule } from './pages/home/home.module';
 import { ContactModule } from './pages/contact/contact.module';
 import { AboutModule } from './pages/about/about.module';
 import { ServicesModule } from './pages/services/services.module';
 import { GalleryModule } from './pages/gallery/gallery.module';
-import { GalleryComponent } from './pages/gallery/gallery.component';
+
+import { AppComponent } from './app.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HeaderComponent } from './sharedpages/header/header.component';
 import { FooterComponent } from './sharedpages/footer/footer.component';
 import { SidenavComponent } from './component/sidenav/sidenav.component';
