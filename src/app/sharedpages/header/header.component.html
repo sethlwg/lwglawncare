@@ -1,11 +1,8 @@
-<mat-toolbar class="flex flex-row h-24 justify-around items-center bg-gradient-to-tl from-green-500 to-white bg-transparent backdrop-blur-sm text-black">
- <img src="../../../assets/lwglawncarelight.jpeg" class="m-2 w-20 h-20 rounded-lg object-cover"/>
-    <div class="flex items-center">
-    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
-    <button mat-icon-button routerLink="/">Home</button>
-  </div>
+<mat-toolbar class="bg-red-500 sm:bg-yellow-500 text-white">
+  <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+  <button style="margin-right: 60px" mat-icon-button routerLink="/">Home</button>
 
-  <button mat-icon-button routerLink="/about" [matMenuTriggerFor]="Information">
+  <button style="margin-right: 70px" mat-icon-button routerLink="/about" [matMenuTriggerFor]="Information">
     About
   </button>
   <mat-menu #Information="matMenu">
@@ -15,9 +12,9 @@
     <button mat-menu-item>Quote</button>
   </mat-menu>
 
-  <button mat-icon-button routerLink="/contact">Contact</button>
+  <button style="margin-right: 75px" mat-icon-button routerLink="/contact">Contact</button>
 
-  <button mat-icon-button routerLink="/services" [matMenuTriggerFor]="menu">Services</button>
+  <button style="margin-right: 80px" mat-icon-button routerLink="/services" [matMenuTriggerFor]="menu">Services</button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item>Mowing & Edging</button>
     <button mat-menu-item>Fertilization</button>
@@ -29,7 +26,7 @@
     <button mat-menu-item>Pre-emergent</button>
   </mat-menu>
 
-  <button mat-icon-button routerLink="/gallery" [matMenuTriggerFor]="picture">
+  <button style="margin-right: 20px" mat-icon-button routerLink="/gallery" [matMenuTriggerFor]="picture">
     Gallery
   </button>
   <mat-menu #picture="matMenu">
