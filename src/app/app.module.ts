@@ -10,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { MatMenuModule } from '@angular/material/menu';
 import { HomeModule } from './pages/home/home.module';
 import { ContactModule } from './pages/contact/contact.module';
@@ -21,10 +22,13 @@ import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HeaderComponent } from './sharedpages/header/header.component';
 import { FooterComponent } from './sharedpages/footer/footer.component';
+import { SidenavComponent } from './component/sidenav/sidenav.component';
 
 @NgModule({
-  declarations: [AppComponent, PageNotFoundComponent, HeaderComponent, FooterComponent],
+  declarations: [AppComponent, PageNotFoundComponent, HeaderComponent, FooterComponent, SidenavComponent],
   exports: [PageNotFoundComponent],
+  providers: [],
+  bootstrap: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -42,9 +46,7 @@ import { FooterComponent } from './sharedpages/footer/footer.component';
     MatGridListModule,
     FormsModule,
     FlexLayoutModule,
-    MatSidenavModule
+    MatSidenavModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent],
 })
 export class AppModule {}
