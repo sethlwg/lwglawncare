@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { FormsModule } from '@angular/forms';
@@ -45,8 +45,8 @@ import { SidenavComponent } from './component/sidenav/sidenav.component';
     MatIconModule,
     MatGridListModule,
     FormsModule,
-    FlexLayoutModule,
     MatSidenavModule,
+    FlexLayoutModule
   ],
 })
 export class AppModule {}
