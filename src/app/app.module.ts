@@ -9,7 +9,6 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { FormsModule } from '@angular/forms';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatMenuModule} from '@angular/material/menu';
 import { HomeModule } from './pages/home/home.module';
 import { ContactModule } from './pages/contact/contact.module';
@@ -45,7 +44,6 @@ import { SidenavComponent } from './component/sidenav/sidenav.component';
     MatGridListModule,
     FormsModule,
     MatSidenavModule,
-    FlexLayoutModule
   ],
 })
 export class AppModule {}
