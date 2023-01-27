@@ -1,14 +1,14 @@
-<mat-toolbar class="flex flex-row h-28 bg-green-400 bg-transparent backdrop-blur-sm">
-  <img class="flex w-24 h-24" src="../../../assets/Logo3.png" />
-  <div class="hidden md:flex flex-row justify-between item-center w-full px-4 py-3">
-    <div class="flex items-center">
-      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
-      <div class="flex">
-        <button mat-icon-button routerLink="/">Home</button>
+ 
+ <div class="z-50 flex flex-row px-4 items-center fixed backdrop-blur-sm bg-transparent w-full shadow-logogreen shadow-sm md:shadow-none">
+   <div class="py-2">
+      <img class="w-30 h-24 object-cover rounded-full" src="../../../assets/lwglawncarelight-removebg-preview.png" />
+  </div>
+  <div class="hidden md:flex justify-around item-center mx-auto w-full font-medium">      
+    <div >
+        <button class="hover:text-logogreen hover:duration-500" mat-icon-button routerLink="/">Home</button>
       </div>
-    </div>
-    <div class="flex">
-      <button mat-icon-button routerLink="/about" [matMenuTriggerFor]="Information">About</button>
+    <div>
+      <button class="hover:text-logogreen hover:duration-500" mat-icon-button routerLink="/about" [matMenuTriggerFor]="Information">About</button>
       <mat-menu #Information="matMenu">
         <button mat-menu-item>Locations</button>
         <button mat-menu-item>Our Teams</button>
@@ -17,11 +17,11 @@
       </mat-menu>
     </div>
 
-    <div class="flex">
-      <button mat-icon-button routerLink="/contact">Contact</button>
+    <div >
+      <button class="hover:text-logogreen hover:duration-500" mat-icon-button routerLink="/contact">Contact</button>
     </div>
-    <div class="flex">
-      <button mat-icon-button routerLink="/services" [matMenuTriggerFor]="menu">Services</button>
+    <div >
+      <button class="hover:text-logogreen hover:duration-500" mat-icon-button routerLink="/services" [matMenuTriggerFor]="menu">Services</button>
       <mat-menu #menu="matMenu">
         <button mat-menu-item>Mowing & Edging</button>
         <button mat-menu-item>Fertilization</button>
@@ -34,8 +34,8 @@
       </mat-menu>
     </div>
 
-    <div class="flex">
-      <button mat-icon-button routerLink="/gallery" [matMenuTriggerFor]="picture">Gallery</button>
+    <div>
+      <button class="hover:text-logogreen hover:duration-500" mat-icon-button routerLink="/gallery" [matMenuTriggerFor]="picture">Gallery</button>
       <mat-menu #picture="matMenu">
         <button mat-menu-item>Before & After</button>
       </mat-menu>
@@ -43,11 +43,11 @@
   </div>
 
   <div class="md:hidden flex ml-auto">
-    <button class="text-white">
+    <button class="">
       <svg class="fill-current h-5 w-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
         <title>Menu</title>
         <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
       </svg>
     </button>
   </div>
-</mat-toolbar>
+</div> 

@@ -5,13 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { FormsModule } from '@angular/forms';
-import { FlexLayoutModule } from '@angular/flex-layout';
-
-import { MatMenuModule } from '@angular/material/menu';
+import {MatMenuModule} from '@angular/material/menu';
 import { HomeModule } from './pages/home/home.module';
 import { ContactModule } from './pages/contact/contact.module';
 import { AboutModule } from './pages/about/about.module';
@@ -45,7 +43,6 @@ import { SidenavComponent } from './component/sidenav/sidenav.component';
     MatIconModule,
     MatGridListModule,
     FormsModule,
-    FlexLayoutModule,
     MatSidenavModule,
   ],
 })
