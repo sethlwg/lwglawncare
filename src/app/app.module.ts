@@ -15,7 +15,7 @@ import { ContactModule } from './pages/contact/contact.module';
 import { AboutModule } from './pages/about/about.module';
 import { ServicesModule } from './pages/services/services.module';
 import { GalleryModule } from './pages/gallery/gallery.module';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HeaderComponent } from './sharedpages/header/header.component';
@@ -44,6 +44,7 @@ import { SidenavComponent } from './component/sidenav/sidenav.component';
     MatGridListModule,
     FormsModule,
     MatSidenavModule,
+    FontAwesomeModule,
   ],
 })
 export class AppModule {}
