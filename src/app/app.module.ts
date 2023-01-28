@@ -24,7 +24,7 @@ import { SidenavComponent } from './component/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent, HeaderComponent, FooterComponent, SidenavComponent],
-  exports: [PageNotFoundComponent],
+  exports: [PageNotFoundComponent,AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
   imports: [
