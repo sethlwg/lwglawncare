@@ -1,27 +1,38 @@
- 
- <div class="z-50 flex flex-row px-4 items-center fixed backdrop-blur-sm bg-transparent w-full shadow-logogreen shadow-md ">
-   <button class="py-2">
-      <img routerLink="/" class="md:w-24 md:h-20 w-20 h-16 object-cover" src="../../../assets/manmowing.png" />
+<div
+  class="z-50 flex flex-row px-4 items-center fixed backdrop-blur-sm bg-transparent w-full shadow-logogreen shadow-md"
+>
+  <button class="py-2">
+    <img routerLink="/" class="md:w-24 md:h-20 w-20 h-16 object-cover" src="../../../assets/manmowing.png" />
   </button>
-  <div class="hidden md:flex flex-row justify-around items-center mx-auto w-full font-medium text-2xl">      
+  <div class="hidden md:flex flex-row justify-around items-center mx-auto w-full font-medium text-2xl">
     <div>
-        <button class="hover:text-logogreen hover:duration-500" routerLink="/">Home</button>
-      </div>
+      <button class="hover:text-logogreen hover:duration-500" routerLink="/">Home</button>
+    </div>
     <div>
-      <button class="hover:text-logogreen hover:duration-500" routerLink="/about" [matMenuTriggerFor]="Information">About</button>
-     <mat-menu #Information="matMenu">
+      <button class="hover:text-logogreen hover:duration-500" routerLink="/about" [matMenuTriggerFor]="Information">
+        About
+      </button>
+      <mat-menu #Information="matMenu">
         <button mat-menu-item>Locations</button>
         <button mat-menu-item>Our Teams</button>
         <button mat-menu-item>Testimonials</button>
         <button mat-menu-item>Quote</button>
-      </mat-menu> 
+      </mat-menu>
     </div>
 
-    <div >
+    <div>
       <button class="hover:text-logogreen hover:duration-500" routerLink="/contact">Contact</button>
     </div>
-    <div >
-      <button class="hover:text-logogreen hover:duration-500" routerLink="/services" [matMenuTriggerFor]="menu"  #clickMe (mouseenter)="clickOnHover()" >Services</button>
+    <div>
+      <button
+        class="hover:text-logogreen hover:duration-500"
+        routerLink="/services"
+        [matMenuTriggerFor]="menu"
+        #clickMe
+        (mouseenter)="clickOnHover()"
+      >
+        Services
+      </button>
       <mat-menu #menu="matMenu">
         <button mat-menu-item>Mowing & Edging</button>
         <button mat-menu-item>Fertilization</button>
@@ -31,14 +42,16 @@
         <button mat-menu-item>Flowerbed Restoration</button>
         <button mat-menu-item>Flowerbed Border Installation</button>
         <button mat-menu-item>Pre-emergent</button>
-      </mat-menu> 
+      </mat-menu>
     </div>
 
     <div>
-      <button class="hover:text-logogreen hover:duration-500" routerLink="/gallery" [matMenuTriggerFor]="picture" >Gallery</button>
-       <mat-menu #picture="matMenu">
+      <button class="hover:text-logogreen hover:duration-500" routerLink="/gallery" [matMenuTriggerFor]="picture">
+        Gallery
+      </button>
+      <mat-menu #picture="matMenu">
         <button mat-menu-item>Before & After</button>
-      </mat-menu> 
+      </mat-menu>
     </div>
   </div>
 
@@ -50,4 +63,4 @@
       </svg>
     </button>
   </div>
-</div> 
+</div>
