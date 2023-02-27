@@ -1,15 +1,26 @@
 <div
-  class="z-50 flex flex-row px-4 items-center fixed backdrop-blur-sm bg-transparent w-full shadow-logogreen shadow-md"
+  class="flex flex-row px-4 items-center fixed backdrop-blur-sm bg-transparent w-full shadow-logogreen shadow-md justify-between"
 >
   <button class="py-2">
-    <img routerLink="/" class="md:w-24 md:h-20 w-20 h-16 object-cover" src="../../../assets/manmowing.png" />
+    <img
+      routerLink="/"
+      class="md:w-24 md:h-20 w-20 h-16 object-cover"
+      src="../../../assets/manmowing.png"
+    />
   </button>
-  <div class="hidden md:flex flex-row justify-around items-center mx-auto w-full font-medium text-2xl">
+  <div
+    class="hidden md:flex flex-row justify-around items-center mx-auto w-full font-medium text-2xl"
+  >
     <div>
-      <button class="hover:text-logogreen hover:duration-500" routerLink="/">Home</button>
+      <button class="hover:text-logogreen hover:duration-500" routerLink="/">
+        Home
+      </button>
     </div>
     <div>
-      <button class="hover:text-logogreen hover:duration-500" routerLink="/about" [matMenuTriggerFor]="Information">
+      <button
+        class="hover:text-logogreen hover:duration-500"
+        [matMenuTriggerFor]="Information"
+      >
         About
       </button>
       <mat-menu #Information="matMenu">
@@ -21,15 +32,17 @@
     </div>
 
     <div>
-      <button class="hover:text-logogreen hover:duration-500" routerLink="/contact">Contact</button>
+      <button
+        class="hover:text-logogreen hover:duration-500"
+        routerLink="/contact"
+      >
+        Contact
+      </button>
     </div>
     <div>
       <button
         class="hover:text-logogreen hover:duration-500"
-        routerLink="/services"
         [matMenuTriggerFor]="menu"
-        #clickMe
-        (mouseenter)="clickOnHover()"
       >
         Services
       </button>
@@ -46,7 +59,10 @@
     </div>
 
     <div>
-      <button class="hover:text-logogreen hover:duration-500" routerLink="/gallery" [matMenuTriggerFor]="picture">
+      <button
+        class="hover:text-logogreen hover:duration-500"
+        [matMenuTriggerFor]="picture"
+      >
         Gallery
       </button>
       <mat-menu #picture="matMenu">
@@ -55,12 +71,40 @@
     </div>
   </div>
 
-  <div class="md:hidden flex ml-auto">
-    <button class="">
-      <svg class="fill-current h-5 w-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-        <title>Menu</title>
-        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-      </svg>
+  <!-- <mat-drawer-container class="bg-transparent" opened="false">
+    <mat-drawer
+      #drawer
+      mode="side"
+      class="-z-50 flex flex-col w-[100px] h-viewport-height overflow-visible bg-transparent backdrop-blur-sm items-center rounded-tl-lg"
+    >
+      <div>
+        <button
+          class="hover:text-logogreen hover:duration-500"
+          (click)="showFiller = !showFiller"
+        >
+          SERVICES:
+        </button>
+        <ul *ngIf="showFiller" >
+          <button>Mowing & Edging</button>
+          <button>Fertilization</button>
+          <button>Weed Control</button>
+          <button>Pest Control</button>
+          <button>Sod Installation</button>
+          <button>Flowerbed Restoration</button>
+          <button>Flowerbed Border Installation</button>
+          <button>Pre-emergent</button>
+        </ul>
+      </div>
+    </mat-drawer>
+    <div class="md:hidden text-logogreen" (click)="drawer.toggle()">
+      <button mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+  </mat-drawer-container> -->
+  <div class="md:hidden text-logogreen">
+    <button mat-icon-button (click)="onHamburgerClick()">
+      <mat-icon>menu</mat-icon>
     </button>
   </div>
 </div>

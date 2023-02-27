@@ -1,6 +1,4 @@
-import { Component, OnInit, ViewChild} from '@angular/core';
-
-
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,17 +6,12 @@ import { Component, OnInit, ViewChild} from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-    @ViewChild('clickMe') clickMe: any;
+  @Output() hamburgerClick = new EventEmitter<void>();
 
-    clickOnHover() {
-      this.clickMe._elementRef.nativeElement.click();
-    }
-   
+  onHamburgerClick() {
+    this.hamburgerClick.emit();
+  }
   constructor() {}
 
   ngOnInit(): void {}
-
 }
-
-
-

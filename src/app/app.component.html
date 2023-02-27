@@ -1,3 +1,9 @@
-<app-header></app-header>
+<app-header (hamburgerClick)="onHamburgerClick()"></app-header>
+<div class="sidebar-container" [class.show-sidebar]="showSidebar">
+  <app-sidenav
+    *ngIf="showSidebar"
+    (closeSidebar)="onCloseSidebar()"
+  ></app-sidenav>
+</div>
 <router-outlet></router-outlet>
 <app-footer></app-footer>

@@ -1,1 +1,117 @@
-<p>sidenav works!</p>
+<div class="bg-gradient-to-tl from-logogreen to-white h-full p-5">
+  <div class="flex flex-col gap-4 justify-start">
+    <img
+      class="md:w-24 md:h-20 w-20 h-16 object-cover"
+      src="../../../assets/manmowing.png"
+    />
+    <button (click)="onCloseSidebar()" class="text-logogreen">
+      <mat-icon class="font-bold">close</mat-icon>
+    </button>
+
+    <div
+      class="hover:text-logogreen hover:duration-500 text-black font-semibold text-base"
+    >
+      <button (click)="onCloseSidebar()" routerLink="/">Home</button>
+    </div>
+
+    <div>
+      <div
+        class="hover:text-logogreen hover:duration-500 text-black font-semibold text-base"
+      >
+        About
+      </div>
+      <ul>
+        <li>
+          <button (click)="onCloseSidebar()" routerLink="/contact">
+            Location
+          </button>
+        </li>
+        <li>
+          <button (click)="onCloseSidebar()" routerLink="/">Our Team</button>
+        </li>
+        <li>
+          <div (click)="onCloseSidebar()" routerLink="/">Testimonials</div>
+        </li>
+        <li>
+          <button (click)="onCloseSidebar()" routerLink="/">Quotes</button>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <div
+        class="hover:text-logogreen hover:duration-500 text-black font-semibold text-base"
+      >
+        Contact
+      </div>
+    </div>
+    <div>
+      <div
+        class="hover:text-logogreen hover:duration-500 text-black font-semibold text-base"
+      >
+        <button (click)="onCloseSidebar()" routerLink="/services">
+          Services
+        </button>
+      </div>
+      <ul>
+        <li>
+          <button (click)="onCloseSidebar()" routerLink="/contact">
+            Mowing & Edging
+          </button>
+        </li>
+        <li>
+          <button (click)="onCloseSidebar()" routerLink="/">
+            Fertilization
+          </button>
+        </li>
+        <li>
+          <button (click)="onCloseSidebar()" routerLink="/">
+            Weed Control
+          </button>
+        </li>
+        <li>
+          <button (click)="onCloseSidebar()" routerLink="/">
+            Control Pest
+          </button>
+          <button (click)="onCloseSidebar()" routerLink="/">
+            Sod Installation
+          </button>
+          <button (click)="onCloseSidebar()" routerLink="/">
+            Flowerbed Restoration
+          </button>
+          <button (click)="onCloseSidebar()" routerLink="/">
+            Flowerbed Border Installation
+          </button>
+          <button (click)="onCloseSidebar()" routerLink="/">
+            Pre-emergent
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <button
+        class="hover:text-logogreen hover:duration-500 text-black font-semibold text-base"
+        (click)="showAbout = !showAbout"
+      >
+        About
+      </button>
+      <ul *ngIf="showAbout">
+        <li>
+          <button (click)="onCloseSidebar()" routerLink="/contact">
+            Location
+          </button>
+        </li>
+        <li>
+          <button (click)="onCloseSidebar()" routerLink="/">Our Team</button>
+        </li>
+        <li>
+          <button (click)="onCloseSidebar()" routerLink="/">
+            Testimonials
+          </button>
+        </li>
+        <li>
+          <button (click)="onCloseSidebar()" routerLink="/">Quotes</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

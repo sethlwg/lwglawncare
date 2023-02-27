@@ -6,6 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  showSidebar = false;
 
+  onHamburgerClick() {
+    this.showSidebar = !this.showSidebar;
+  }
+
+  onCloseSidebar() {
+    this.showSidebar = false;
+  }
   title = 'homepage';
 }

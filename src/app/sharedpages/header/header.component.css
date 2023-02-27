@@ -1,10 +1,13 @@
 button.custom-button {
-    background-color: transparent;
-    color: black;
-    font-size: larger;
-    font-weight: bold;
-  }
+  background-color: transparent;
+  color: black;
+  font-size: larger;
+  font-weight: bold;
+}
 
-  .custom-button:hover{
-    background-color: #5CC85B;
-  }
+.custom-button:hover {
+  background-color: #5cc85b;
+}
+.container.show-sidebar {
+  transform: translateX(-300px);
+}
