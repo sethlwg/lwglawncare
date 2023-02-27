@@ -1,39 +1,57 @@
 <div class="bg-gradient-to-tl from-logogreen to-white h-full p-5">
   <div class="flex flex-col gap-4 justify-start">
-    <img
-      class="md:w-24 md:h-20 w-20 h-16 object-cover"
-      src="../../../assets/manmowing.png"
-    />
     <button (click)="onCloseSidebar()" class="text-logogreen">
       <mat-icon class="font-bold">close</mat-icon>
     </button>
 
     <div
-      class="hover:text-logogreen hover:duration-500 text-black font-semibold text-base"
+      class="hover:text-logogreen hover:duration-500 text-black font-semibold text-base cursor-pointer"
     >
       <button (click)="onCloseSidebar()" routerLink="/">Home</button>
     </div>
 
     <div>
       <div
-        class="hover:text-logogreen hover:duration-500 text-black font-semibold text-base"
+        class="hover:text-logogreen hover:duration-500 text-black font-semibold text-base cursor-pointer"
       >
-        About
+        <button (click)="onCloseSidebar()" routerLink="/about">About</button>
       </div>
       <ul>
         <li>
-          <button (click)="onCloseSidebar()" routerLink="/contact">
+          <button
+            (click)="onCloseSidebar()"
+            routerLink="/contact"
+            class="cursor-pointer hover:text-gray-500"
+          >
             Location
           </button>
         </li>
         <li>
-          <button (click)="onCloseSidebar()" routerLink="/">Our Team</button>
+          <button
+            (click)="onCloseSidebar()"
+            routerLink="/"
+            class="cursor-pointer hover:text-gray-500"
+          >
+            Our Team
+          </button>
         </li>
         <li>
-          <div (click)="onCloseSidebar()" routerLink="/">Testimonials</div>
+          <div
+            (click)="onCloseSidebar()"
+            routerLink="/"
+            class="cursor-pointer hover:text-gray-500"
+          >
+            Testimonials
+          </div>
         </li>
         <li>
-          <button (click)="onCloseSidebar()" routerLink="/">Quotes</button>
+          <button
+            (click)="onCloseSidebar()"
+            routerLink="/"
+            class="cursor-pointer hover:text-gray-500"
+          >
+            Quotes
+          </button>
         </li>
       </ul>
     </div>
@@ -41,7 +59,13 @@
       <div
         class="hover:text-logogreen hover:duration-500 text-black font-semibold text-base"
       >
-        Contact
+        <button
+          class="cursor-pointer"
+          (click)="onCloseSidebar()"
+          routerLink="/contact"
+        >
+          Contact
+        </button>
       </div>
     </div>
     <div>
@@ -54,34 +78,66 @@
       </div>
       <ul>
         <li>
-          <button (click)="onCloseSidebar()" routerLink="/contact">
+          <button
+            (click)="onCloseSidebar()"
+            routerLink="/contact"
+            class="cursor-pointer hover:text-gray-500"
+          >
             Mowing & Edging
           </button>
         </li>
         <li>
-          <button (click)="onCloseSidebar()" routerLink="/">
+          <button
+            (click)="onCloseSidebar()"
+            routerLink="/"
+            class="cursor-pointer hover:text-gray-500"
+          >
             Fertilization
           </button>
         </li>
         <li>
-          <button (click)="onCloseSidebar()" routerLink="/">
+          <button
+            (click)="onCloseSidebar()"
+            routerLink="/"
+            class="cursor-pointer hover:text-gray-500"
+          >
             Weed Control
           </button>
         </li>
         <li>
-          <button (click)="onCloseSidebar()" routerLink="/">
+          <button
+            (click)="onCloseSidebar()"
+            routerLink="/"
+            class="cursor-pointer hover:text-gray-500"
+          >
             Control Pest
           </button>
-          <button (click)="onCloseSidebar()" routerLink="/">
+          <button
+            (click)="onCloseSidebar()"
+            routerLink="/"
+            class="cursor-pointer hover:text-gray-500"
+          >
             Sod Installation
           </button>
-          <button (click)="onCloseSidebar()" routerLink="/">
+          <button
+            (click)="onCloseSidebar()"
+            routerLink="/"
+            class="cursor-pointer hover:text-gray-500"
+          >
             Flowerbed Restoration
           </button>
-          <button (click)="onCloseSidebar()" routerLink="/">
+          <button
+            (click)="onCloseSidebar()"
+            routerLink="/"
+            class="cursor-pointer hover:text-gray-500"
+          >
             Flowerbed Border Installation
           </button>
-          <button (click)="onCloseSidebar()" routerLink="/">
+          <button
+            (click)="onCloseSidebar()"
+            routerLink="/"
+            class="cursor-pointer hover:text-gray-500"
+          >
             Pre-emergent
           </button>
         </li>
@@ -89,27 +145,21 @@
     </div>
     <div>
       <button
-        class="hover:text-logogreen hover:duration-500 text-black font-semibold text-base"
-        (click)="showAbout = !showAbout"
+        class="hover:text-logogreen hover:duration-500 text-black font-semibold text-base cursor-pointer"
+        routerLink="/gallery"
+        (click)="onCloseSidebar()"
       >
-        About
+        Gallery
       </button>
-      <ul *ngIf="showAbout">
+      <ul>
         <li>
-          <button (click)="onCloseSidebar()" routerLink="/contact">
-            Location
+          <button
+            (click)="onCloseSidebar()"
+            routerLink="/contact"
+            class="cursor-pointer hover:text-gray-500"
+          >
+            Before & After
           </button>
-        </li>
-        <li>
-          <button (click)="onCloseSidebar()" routerLink="/">Our Team</button>
-        </li>
-        <li>
-          <button (click)="onCloseSidebar()" routerLink="/">
-            Testimonials
-          </button>
-        </li>
-        <li>
-          <button (click)="onCloseSidebar()" routerLink="/">Quotes</button>
         </li>
       </ul>
     </div>
