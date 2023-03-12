@@ -16,14 +16,14 @@
         Home
       </button>
     </div>
-    <div (mouseenter)="openMenu()" (mouseleave)="closeMenu()">
+    <div>
       <button
         class="hover:text-logogreen hover:duration-500"
         [matMenuTriggerFor]="Information"
       >
         About
       </button>
-      <mat-menu #Information="matMenu" [hasBackdrop]="false">
+      <mat-menu #Information="matMenu">
         <button mat-menu-item>Locations</button>
         <button mat-menu-item>Our Teams</button>
         <button mat-menu-item>Testimonials</button>

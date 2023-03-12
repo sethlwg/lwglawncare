@@ -1,11 +1,4 @@
-import {
-  Component,
-  EventEmitter,
-  OnInit,
-  Output,
-  ViewChild,
-} from '@angular/core';
-import { MatMenuTrigger } from '@angular/material/menu';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -14,19 +7,6 @@ import { MatMenuTrigger } from '@angular/material/menu';
 })
 export class HeaderComponent implements OnInit {
   @Output() hamburgerClick = new EventEmitter<void>();
-  @ViewChild(MatMenuTrigger) trigger!: MatMenuTrigger;
-
-  openMenu() {
-    setTimeout(() => {
-      this.trigger.openMenu();
-    }, 500);
-  }
-
-  closeMenu() {
-    setTimeout(() => {
-      this.trigger.closeMenu();
-    }, 500);
-  }
 
   onHamburgerClick() {
     this.hamburgerClick.emit();
