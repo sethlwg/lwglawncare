@@ -1,5 +1,5 @@
 <div
-  class="z-50 flex flex-row px-4 items-center fixed backdrop-blur-sm bg-transparent w-full shadow-logogreen shadow-md justify-between"
+  class="z-50 flex flex-row px-4 items-center h-20 fixed backdrop-blur-sm bg-transparent w-full shadow-logogreen shadow-md justify-between"
 >
   <button class="py-2">
     <img
@@ -9,21 +9,21 @@
     />
   </button>
   <div
-    class="hidden md:flex flex-row justify-around items-center mx-auto w-full font-medium text-2xl"
+    class="hidden md:flex flex-row justify-around items-center mx-auto w-full font-medium text-xl"
   >
     <div>
       <button class="hover:text-logogreen hover:duration-500" routerLink="/">
         Home
       </button>
     </div>
-    <div>
+    <div (mouseenter)="openMenu()" (mouseleave)="closeMenu()">
       <button
         class="hover:text-logogreen hover:duration-500"
         [matMenuTriggerFor]="Information"
       >
         About
       </button>
-      <mat-menu #Information="matMenu">
+      <mat-menu #Information="matMenu" [hasBackdrop]="false">
         <button mat-menu-item>Locations</button>
         <button mat-menu-item>Our Teams</button>
         <button mat-menu-item>Testimonials</button>
