@@ -28,7 +28,7 @@
     >
       Contact Us Today!
     </p>
-    <div class="form-row flex flex-col justify-between mb-1">
+    <form #myForm="ngForm" class="form-row flex flex-col justify-between mb-2">
       <label for="first-name" class="mb-2"
         >First Name<span class="required text-red-500">*</span></label
       >
@@ -52,9 +52,6 @@
         required
         class="border border-gray-300 py-2 px-3 rounded-lg mb-2"
       />
-    </div>
-
-    <div class="form-row flex flex-col mb-1">
       <label for="email" class="mb-2"
         >Email<span class="required text-red-500">*</span>
       </label>
@@ -66,7 +63,6 @@
         required
         class="border border-gray-300 py-2 px-3 rounded-lg mb-2"
       />
-
       <label for="phone" class="mb-2"
         >Phone Number<span class="required text-red-500">*</span>
       </label>
@@ -78,7 +74,6 @@
         required
         class="border border-gray-300 py-2 px-3 rounded-lg mb-2"
       />
-
       <label for="message" class="mb-2"
         >Message<span class="required text-red-500">*</span>
       </label>
@@ -89,12 +84,14 @@
         required
         class="border border-gray-300 py-2 px-3 rounded-lg mb-2 resize-y min-h-32 max-h-96"
       ></textarea>
-    </div>
-    <button
-      type="submit"
-      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-    >
-      Submit
-    </button>
+      <button
+        [disabled]="!myForm.valid"
+        type="submit"
+        class="bg-red-500 text-white font-bold py-2 px-4 rounded"
+        [ngClass]="{ 'bg-logogreen text-white': myForm.form.valid }"
+      >
+        Submit
+      </button>
+    </form>
   </div>
 </div>
