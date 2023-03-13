@@ -15,3 +15,19 @@ mat-grid-tile {
 .animate-slide-in-bottom {
   animation: slide-in-bottom 0.9s ease-out;
 }
+
+.animate-slide-in-delay {
+  animation: slide-in-delay 0.8s ease-in-out;
+  animation-delay: 0s; /* adjust the delay time as needed */
+}
+
+@keyframes slide-in-delay {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
