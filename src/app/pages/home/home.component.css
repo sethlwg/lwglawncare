@@ -1,3 +1,59 @@
 mat-grid-tile {
   background: greenyellow;
 }
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.animate-slide-in-bottom {
+  animation: slide-in-bottom 0.9s ease-out;
+}
+
+.animate-slide-in-delay {
+  animation: slide-in-delay 0.8s ease-in-out;
+  animation-delay: 0s; /* adjust the delay time as needed */
+}
+
+@keyframes slide-in-delay {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.review-box {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.stars i {
+  color: #f6e311;
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.review-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
